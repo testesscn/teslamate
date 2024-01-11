@@ -11,7 +11,7 @@ inputs:
   repository_owner:
     description: "Repository owner"
     required: true
-    default: "teslamate-org"
+    default: "testesscn"
   repository:
     description: "Repo owner and name (repo_owner/repo_name)"
     required: true
@@ -43,7 +43,7 @@ runs:
       if: inputs.is_dockerhub_pushed != ''
       uses: docker/login-action@v3.0.0
       with:
-        username: teslamate
+        username: testesscn
         password: ${{ inputs.docker_password }}
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v3.0.0
